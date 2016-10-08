@@ -15,8 +15,8 @@ A simple infinite scroll React.js component.
 
 ## API
 |Prop|Description|Type|
-|:-----:|:-----:|:-----:|
-|callback|The callback to be ran when we reach the offset|`function` (default: `function() {}`)|
+|-----|-----|-----|
+|callback|The callback to be ran when we reach the offset|`function` (required)|
 |disabled|Flag to run callback once we reach the offset|`boolean` (default: `false`)|
 |offset|Allowance before reaching the offset|`number` (default: `250`)|
 |container|Flag if we're using the window (`false`) or this `div` (requires to be scrollable)|`boolean` (default: `false`)|
