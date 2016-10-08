@@ -11,6 +11,7 @@
     "infinite",
     "scroll"
   ],
+  "repository": "https://github.com/srph/react-infinite-scroll",
   "author": "Kier Borromeo <seraphipod@gmail.com> (http://srph.github.io)",
   "license": "MIT"
 }
