@@ -117,38 +117,47 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'wrapper' },
+	        null,
 	        _react2.default.createElement(
-	          'h1',
-	          { className: 'heading' },
-	          'Quotes \u2014 ',
+	          'a',
+	          { href: '#', className: 'github' },
+	          _react2.default.createElement('img', { src: 'github.png', alt: 'Github' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'wrapper' },
 	          _react2.default.createElement(
-	            'small',
-	            null,
-	            'Inspiring quotes'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _2.default,
-	          { callback: this.request, disabled: this.state.loading },
-	          this.state.items.map(function (item, i) {
-	            return _react2.default.createElement(
-	              'div',
-	              { className: 'card spacer', key: i },
-	              _react2.default.createElement(
-	                'h1',
-	                { className: 'card-quote' },
-	                item[0]
-	              ),
-	              _react2.default.createElement(
-	                'h6',
-	                { className: 'card-author' },
-	                item[1]
-	              )
-	            );
-	          })
-	        ),
-	        this.state.loading && _react2.default.createElement(Loader, null)
+	            'h1',
+	            { className: 'heading' },
+	            'Quotes \u2014 ',
+	            _react2.default.createElement(
+	              'small',
+	              null,
+	              'Inspiring quotes'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _2.default,
+	            { callback: this.request, disabled: this.state.loading },
+	            this.state.items.map(function (item, i) {
+	              return _react2.default.createElement(
+	                'div',
+	                { className: 'card spacer', key: i },
+	                _react2.default.createElement(
+	                  'h1',
+	                  { className: 'card-quote' },
+	                  item[0]
+	                ),
+	                _react2.default.createElement(
+	                  'h6',
+	                  { className: 'card-author' },
+	                  item[1]
+	                )
+	              );
+	            })
+	          ),
+	          this.state.loading && _react2.default.createElement(Loader, null)
+	        )
 	      );
 	    }
 	  }]);

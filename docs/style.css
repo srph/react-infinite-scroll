@@ -51,6 +51,19 @@ html, body {
   margin-bottom: 18px;
 }
 
+.github {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: 0.2s opacity ease-in-out;
+}
+
+.github:hover {
+  opacity: 1;
+}
+
 .loader {
   margin-left: auto;
   margin-right: auto;

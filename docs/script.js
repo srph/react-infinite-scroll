@@ -21,19 +21,25 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <h1 className="heading">Quotes &mdash; <small>Inspiring quotes</small></h1>
+      <div>
+        <a href="https://github.com/srph/react-infinite-scroll" target="_blank" className="github">
+          <img src="github.png" alt="Github" />
+        </a>
 
-        <Infinite callback={this.request} disabled={this.state.loading}>
-          {this.state.items.map((item, i) =>
-            <div className="card spacer" key={i}>
-              <h1 className="card-quote">{item[0]}</h1>
-              <h6 className="card-author">{item[1]}</h6>
-            </div>
-          )}
-        </Infinite>
+        <div className="wrapper">
+          <h1 className="heading">Quotes &mdash; <small>Inspiring quotes</small></h1>
 
-        {this.state.loading && <Loader />}
+          <Infinite callback={this.request} disabled={this.state.loading}>
+            {this.state.items.map((item, i) =>
+              <div className="card spacer" key={i}>
+                <h1 className="card-quote">{item[0]}</h1>
+                <h6 className="card-author">{item[1]}</h6>
+              </div>
+            )}
+          </Infinite>
+
+          {this.state.loading && <Loader />}
+        </div>
       </div>
     );
   }
