@@ -2,7 +2,7 @@
   "name": "@srph/react-infinite-scroll",
   "version": "0.1.0",
   "description": "A simple infinite scroll React.js component",
-  "main": "lib/infinite.js",
+  "main": "dist/infinite.js",
   "scripts": {
     "example": "webpack -v --progress --config=docs/webpack.config.js",
     "example:run": "npm run example && open docs/index.html",
