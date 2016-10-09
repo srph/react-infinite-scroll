@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: San Francisco, -apple-system, BlinkMacSystemFont, ".SFSNText-Regular", Segoe UI, Ubuntu, Helvetica, sans-serif;
+}
+
+.wrapper {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 300;
+  font-size: 32px;
+  text-align: center;
+}
+
+.heading small {
+  color: #06BA63;
+}
+
+.card {
+  padding: 48px 24px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
+  background: #2D3142;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.card-quote {
+  color: #fff;
+  font-size: 32px;
+  font-family: 'Trocchi', Georgia, serif;
+}
+
+.card-author {
+  font-weight: 300;
+  color: #B0D7FF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.spacer {
+  margin-bottom: 18px;
+}
+
+.loader {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.loader > div {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #2D3142;
+  border-radius: 50%;
+  animation: pop 0.5s infinite ease-in-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+.loader > div:not(:last-child) {
+  margin-right: 4px;
+}
+
+.loader > div:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loader > div:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.loader > div:nth-child(3) {
+  animation-delay: -0.048s;
+}
+
+@keyframes pop {
+  0% { transform: translateY(16px); opacity: 0.6; }
+  80% { transform: translateY(0px); opacity: 1; }
+}

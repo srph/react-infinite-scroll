@@ -20,7 +20,8 @@ A simple infinite scroll React.js component.
 |disabled|Flag to run callback once we reach the offset|`boolean` (default: `false`)|
 |offset|Allowance before reaching the offset|`number` (default: `250`)|
 |container|Flag if we're using the window (`false`) or this `div` (requires to be scrollable)|`boolean` (default: `false`)|
-|reverse|Trigger callback when we reach the top instead of the bottom (default)|`boolean` (default: `false`)|
+|reverse|Trigger callback when we reach the top instead of the bottom. Useful for chat applications.|`boolean` (default: `false`)|
 
-### NIH?
-I was a bit frustrated with the existing libraries, so I went to come up with a simpler API.
+### Notes
+- I was a bit frustrated with the existing libraries, so I went to come up with a simpler API.
+- I'd like to keep this library simple -- if you're looking for more advanced features and performant implementations, please check [react-virtualized](https://github.com/bvaughn/react-virtualized) and [react-infinity](https://github.com/nmn/react-infinity).

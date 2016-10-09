@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import {scrollTop, height} from 'dom-helpers';
+import scrollTop from 'dom-helpers/query/scrollTop';
+import height from 'dom-helpers/query/height';
 
 export default class Infinite extends Component {
   static propTypes = {
@@ -7,8 +8,6 @@ export default class Infinite extends Component {
     offset: PropTypes.number,
     disabled: PropTypes.bool,
     container: PropTypes.bool,
-
-    // If the callback is supposed to run when scrolled upwards.
     reverse: PropTypes.bool
   };
 
@@ -22,18 +21,15 @@ export default class Infinite extends Component {
   // Last scroll, to check if we scrolled up or down
   last = 0;
 
-  // The scrolling container.
-  // If the container is window, this is set to window.
-  // Otherwise, set to the container element.
+  // The scrolling container, where we run the scroll listener.
+  // The actual container doesn't trigger the scrolling event.
   get scroller() {
     return this.props.container
       ? this.refs.container
       : window;
   }
 
-  // The container.
-  // If the container is window, this is set to body.
-  // Otherwise, set to the container element.
+  // The actual container, where we perform the actual calculations with.
   get container() {
     return this.props.container
       ? this.refs.container
@@ -49,7 +45,7 @@ export default class Infinite extends Component {
   }
 
   render() {
-    const {children, offset, disabled, container, ...props} = this.props;
+    const {children, offset, disabled, container, callback, reverse, ...props} = this.props;
     return <div ref="container" {...props}>{children}</div>;
   }
 
