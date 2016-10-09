@@ -12,7 +12,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _domHelpers = require('dom-helpers');
+var _scrollTop = require('dom-helpers/query/scrollTop');
+
+var _scrollTop2 = _interopRequireDefault(_scrollTop);
+
+var _height = require('dom-helpers/query/height');
+
+var _height2 = _interopRequireDefault(_height);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,12 +59,12 @@ var Infinite = function (_Component) {
         return;
       }
 
-      var totalScroll = (0, _domHelpers.scrollTop)(scroller);
+      var totalScroll = (0, _scrollTop2.default)(scroller);
 
       // If we're supposed to scroll downwards, and we're doing so.
       if (!reverse && _this.last < totalScroll) {
         var containerBottom = container.scrollHeight;
-        var scrollerHeight = (0, _domHelpers.height)(scroller);
+        var scrollerHeight = (0, _height2.default)(scroller);
 
         if (totalScroll + offset >= containerBottom - scrollerHeight) {
           callback();
@@ -94,8 +100,10 @@ var Infinite = function (_Component) {
       var offset = _props.offset;
       var disabled = _props.disabled;
       var container = _props.container;
+      var callback = _props.callback;
+      var reverse = _props.reverse;
 
-      var props = _objectWithoutProperties(_props, ['children', 'offset', 'disabled', 'container']);
+      var props = _objectWithoutProperties(_props, ['children', 'offset', 'disabled', 'container', 'callback', 'reverse']);
 
       return _react2.default.createElement(
         'div',
