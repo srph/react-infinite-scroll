@@ -120,7 +120,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'a',
-	          { href: '#', className: 'github' },
+	          { href: 'https://github.com/srph/react-infinite-scroll', target: '_blank', className: 'github', title: 'Github Repository' },
 	          _react2.default.createElement('img', { src: 'github.png', alt: 'Github' })
 	        ),
 	        _react2.default.createElement(

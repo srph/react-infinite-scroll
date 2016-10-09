@@ -22,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <a href="https://github.com/srph/react-infinite-scroll" target="_blank" className="github">
+        <a href="https://github.com/srph/react-infinite-scroll" target="_blank" className="github" title="Github Repository">
           <img src="github.png" alt="Github" />
         </a>
 
