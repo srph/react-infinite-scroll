@@ -4,7 +4,7 @@
   "description": "A simple infinite scroll React.js component",
   "main": "lib/infinite.js",
   "scripts": {
-    "example": "webpack --config=example/webpack.config.js",
+    "example": "webpack --config=docs/webpack.config.js",
     "prepublish": "babel index.js -o dist/infinite.js"
   },
   "keywords": [

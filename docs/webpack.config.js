@@ -1,6 +1,6 @@
 module.exports = {
-  entry: "./example/script.js",
-  output: { filename: "example/bundle.js" },
+  entry: "docs/script.js",
+  output: { filename: "docs/bundle.js" },
 
   module: {
     loaders: [{
