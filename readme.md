@@ -1,4 +1,4 @@
-# react-infinite-scroll
+# react-infinite-scroll [![npm version](https://img.shields.io/npm/v/@srph/react-infinite-scroll.svg?style=flat)](https://www.npmjs.com/package/@srph/react-infinite-scroll)
 ```bash
 npm i @srph/react-infinite-scroll
 ```
